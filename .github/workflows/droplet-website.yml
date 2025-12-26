@@ -1,0 +1,22 @@
+name: Droplet Website
+run-name: Deploying website for Prompt University
+on: [push]
+
+jobs:
+    Droplet-Droplet-Root:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository code
+              uses: actions/checkout@v3
+
+            - name: Deploy
+              uses: easingthemes/ssh-deploy@main
+              env:
+                  SSH_PRIVATE_KEY: ${{ secrets.DROPLET_KEY_SECRET }}
+                  ARGS: "-rlgoDzvc -i"
+                  SOURCE: "Pages/"
+                  REMOTE_HOST: ${{ secrets.DROPLET_HOST_SECRET}}
+                  REMOTE_USER: ${{ secrets.DROPLET_USERNAME_SECRET }}
+                  TARGET: /var/www/promptuniversity.info
+
+            - run: echo "🍏 This job's status is ${{ job.status }}."
