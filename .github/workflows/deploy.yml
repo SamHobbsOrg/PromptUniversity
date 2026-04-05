@@ -1,0 +1,51 @@
+name: Build and Deploy PromptUniversity to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    if: false
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout PromptUniversity
+        uses: actions/checkout@v4
+        with:
+          repository: SamHobbsOrg/PromptUniversity
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Checkout SimpleSubstitutionSSG
+        uses: actions/checkout@v4
+        with:
+          repository: SamHobbsOrg/SimpleSubstitutionSSG
+          path: ssg-tool
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      
+      - name: Restore SimpleSubstitutionSSG
+        working-directory: ./ssg-tool
+        run: dotnet restore
+
+      - name: Build SimpleSubstitutionSSG
+        working-directory: ./ssg-tool
+        run: dotnet build --no-restore
+
+      - name: Run SimpleSubstitutionSSG
+        working-directory: ./
+        run: dotnet run --project ./ssg-tool/SimpleSubstitutionSSG.csproj --no-build -- Configuration.yaml
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: promptuniversity  
+          directory: SSGout
+          branch: main

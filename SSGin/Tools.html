@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Tools</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- ssgb Header -->
+    <main class="content-wrapper">
+        <article class="post">
+
+            <header class="post-header">
+                <h2 class="post-title">Prompt Engineering Tools</h2>
+            </header>
+            <div class="post-content">
+                <p class="lead">
+                    The applications in this page can help experiment with and
+                    learn Prompt Engineering. There is an abundance of tools available,
+                    if any seem useful then you can search for similar tools in case
+                    there are any that work better for you. Most of these are
+                    desktops applidcaitons.
+                </p>
+
+                <h3>Local LLM environments</h3>
+                <p>
+                    Using local LLM environments we can download a LLM and use it locally.
+                    Prompts entered in these tools are typically executed on your own machine
+                    instead of being sent to a third‑party cloud API for processing. The local
+                    (your) system still needs adequate resources, such as sufficient main memory
+                    and, for many models, one or more GPUs.
+                </p>
+                <h4>Ollama</h4>
+                <p>
+                    <a href="https://ollama.com">Ollama</a> primarily operates as a
+                    command-line interface (CLI) tool for downloading and running
+                    LLMs. There are third-party GUIs, such as Open WebUI, that
+                    provide a ChatGPT-like browser interface.
+                </p>
+                <h4>LM Studio</h4>
+                <p>
+                    <a href="https://lmstudio.ai">LM Studio</a> enables you to
+                    develop and experiment with Large Language Model (LLM)
+                    virtual assistants in your local computer, fully offline, after
+                    a model has been downloaded. It has a built‑in GUI similar to
+                    web‑based chat assistants like ChatGPT. After installing it we
+                    must download a model but models are executed locally. Due to
+                    its built-in GUI LM Studio is more beginner-friendly than Ollama.
+                </p>
+                <p>
+                    There are many models available, most of them are free but some
+                    might require commercial terms. LM Studio supports common
+                    local‑model formats such as GGUF and MLX‑optimized packages,
+                    which can also be used with other tools like Ollama.
+                </p>
+                <p>
+                    LM Studio uses the open‑source inference engine
+                    <code>llama.cpp</code> internally.
+                </p>
+
+                <h3>Prompt‑engineering IDEs</h3>
+                <p>
+                    Prompt Engineering IDEs might be too advanced for beginners. They
+                    resemble traditional IDEs but are tailored to prompt engineering.
+                    They provide editors, versioning, testing, and evaluation for prompts, and may
+                    connect directly to your applications or agents via SDKs or APIs.
+                </p>
+                <h4>Promptmetheus</h4>
+                <p>
+                    <a href="https://promptmetheus.com">Promptmetheus</a> is a
+                    prompt‑engineering IDE designed to help you compose, test, and
+                    optimize prompts across multiple AI models and APIs. It
+                    provides a structured editor, versioning, and evaluation
+                    features for comparing prompt variants, inspect traces, and
+                    collaborate with teams while keeping your prompts organized
+                    like source files.
+                </p>
+                <h4>xAI PromptIDE</h4>
+                <p>
+                    <a href="https://x.ai/news/prompt-ide">xAI PromptIDE</a> is an
+                    IDE for designing and analyzing prompts that interact with
+                    Grok‑1 models. It includes a Python editor, an SDK, and
+                    built‑in analytics for tokenization, probabilities, and
+                    attention masks, making it particularly useful for advanced
+                    prompt engineering and interpretability research.
+                </p>
+                <h4>PromptSandbox.io</h4>
+                <p>
+                    <a href="https://promptsandbox.io">PromptSandbox.io</a> offers
+                    a visual, node‑based IDE for designing and executing
+                    prompt‑driven workflows. You connect prompts and tools in a
+                    canvas‑style environment and run them against compatible APIs.
+                    That is helpful for experimenting with multi‑step reasoning or
+                    agent‑style pipelines without writing much code.
+                </p>
+
+                <h3>Prompt management and versioning</h3>
+                <p>
+                    <a href="https://www.getmaxim.ai">Maxim AI</a> and
+                    <a href="https://www.promptflow.com">PromptFlow</a> are tools
+                    that can be useful for managing prompts when you have
+                    developed many of them. They provide prompt versioning with
+                    history, diffs, and the ability to roll back to earlier versions,
+                    much like Git but they do not use Git for version control.
+                </p>
+
+                <h3>Advanced: LLM inference engines and backends</h3>
+                <p>
+                    Tools in this category run the models themselves and expose APIs or low‑level interfaces
+                    that other applications (playgrounds, chat UIs, or agents) can talk to.
+                    They are more appropriate once you understand how local LLMs work and want to build or
+                    deploy higher‑performance or more customized systems.
+                </p>
+                <h4>llama.cpp</h4>
+                <p>
+                    <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>
+                    is a lightweight, open‑source C/C++ library for running LLMs
+                    locally, especially popular for CPU‑ and GPU‑ optimized
+                    inference with GGUF‑formatted models. It is used internally
+                    by several GUI tools such as LM Studio.
+                </p>
+
+                <h4>vLLM</h4>
+                <p>
+                    <a href="https://vllm.ai">vLLM</a> is a high‑throughput, memory‑efficient Python library
+                    and server for LLM inference and serving, often used when deploying models on GPU‑equipped
+                    machines or clusters. It exposes an OpenAI‑compatible API that can be consumed by
+                    chat UIs, agents, or other applications.
+                </p>
+            </div>
+
+        </article>
+    </main>
+    <!-- ssgb Footer -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+input_dir: "SSGin"
+output_dir: "SSGout"
+snippets_dir: "Snippets"
+
+block_substitutions:
+  - name: "Header"
+    file: "Header.html"
+  - name: "Footer"
+    file: "Footer.html"
+
+inline_substitutions:
+  - name: "substitution"
+    text: "substitution worked"
