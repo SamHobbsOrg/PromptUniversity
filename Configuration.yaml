@@ -1,3 +1,6 @@
+
+debug: "yes"
+
 input_dir: "SSGin"
 output_dir: "SSGout"
 snippets_dir: "Snippets"
