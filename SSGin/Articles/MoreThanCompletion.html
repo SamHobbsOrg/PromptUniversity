@@ -17,23 +17,53 @@
             <div class="post-content">
                 <p>
                     This article is intended to correct some very common misrepresentaions of
-                    LLMs and virtual assistants.
+                    virtual assistants.
                 </p>
                 <p>
-                    When you read a book or course about Prompt Engineering that says that LLMs simnply
-                    do prompt completion, you might think that they do more. And the ones you likely
-                    encounter likely do.
+                    When you read a book or course about Prompt Engineering that says that LLMs simply
+                    do prompt completion, you might think that they <b>seem</b> to do more.
+                    And the ones you likely encounter do do much more.
                 </p>
                 <p>
                     Most books and courses teach that LLMs just complete prompts by guessing what is likely
-                    to follow a prompt provided to it but that is an oversimplification.
+                    to follow a prompt provided to it. That however is an oversimplification.
                     Base LLMs do predict sequences statistically, yet the LLMs in virtual assistants you
-                    interact with daily are Instruction-tuned LLMs that go far beyond
-                    that fundamental capability. Virtual assistants add much more to what base LLMs do.
-                    A major feature of virtual assistants is determination of intent. They also decompose
-                    complex requests into manageable parts. Responses are then composed to be appropriate
-                    for the prompt, not just a dump of material found elsewhere.
+                    interact with daily are instruction-tuned LLMs that go far beyond that
+                    fundamental capability. Instruction-tuned LLMs do rely on next-token prediction
+                    internally. Instruction tuning is extensive additional software
+                    and data added to a base LLM to provide understanding of intent, the following
+                    of instructions, refusal of harmful requests and to match response style to
+                    the user’s stated or implied needs. They also decompose complex requests into
+                    manageable parts. Responses are then composed to be appropriate for the prompt,
+                    not just a dump of material found elsewhere.
                 </p>
+                <p>
+                    Another feature of virtual assistants that is not simple completion is the use
+                    of tools, such as search tools, calculators, APIs and generation of
+                    images and videos and documents.
+                </p>
+                <p>
+                    When virtual assistants were asked to review the preceding they insist that
+                    <i>system prompts</i> (also called <i>system instructions</i>) should also
+                    be mentioned. System prompts are hidden instructions that are also included in
+                    prompts you enter. System prompts guide behavior, enforce policies
+                    and shape responses.
+                    <a href="https://arstechnica.com/ai/2026/04/openai-codex-system-prompt-includes-explicit-directive-to-never-talk-about-goblins">
+                    OpenAI Codex system prompt includes explicit directive to &quot;never talk
+                    about goblins&quot; - Ars Technica</a> is an interesting article about system
+                    prompts.</p>
+                <p>And it is more complicated than that. Instead of there being prompts going into
+                    an instance of a LLM and something coming out, the reality is that prompts are
+                    processed by an orchestrator that might select one of multiple possible LLM
+                    instances or might even use more than one LLM instance at a time. It might
+                    augment its knowledge by searching external sources. It might even write and
+                    execute a computer program. An orchestrator typically begins by attempting to
+                    determine intent. It might create a proposed response then internally critique
+                    it and revise it before returning a final response.</p>
+                <p>Virtual assistants do more than just complete a prompt. When you read a book or
+                    see or read a course saying LLMs just complete prompts, ignore that part and be
+                    <b>skeptical</b> of everything else the book or course says. There is a good
+                    chance that your favorite virtual assistant will guide you more accurately.</p>
             </div>
 
         </article>
