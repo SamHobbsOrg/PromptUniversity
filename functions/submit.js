@@ -48,7 +48,7 @@ export async function onRequestPost(context) {
         }
 
         // 3. Promote the user to the "Thank You" page
-        return Response.redirect(`${url.origin}/thanks.html`, 303);
+        return Response.redirect(`${url.origin}/Thanks.html`, 303);
 
     } catch (err) {
         console.error("Mail Error:", err.message);
