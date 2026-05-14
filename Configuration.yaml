@@ -2,7 +2,7 @@
 debug: "yes"
 
 input_dir: "SSGin"
-output_dir: "SSGout"
+output_dir: "..\\..\\..\\..\\..\\..\\Software\\Websites\\PromptUniversity"
 snippets_dir: "Snippets"
 
 block_substitutions:
@@ -12,5 +12,5 @@ block_substitutions:
     file: "Footer.html"
 
 inline_substitutions:
-  - name: "substitution"
-    text: "substitution worked"
+  - name: "TURNSTILE_SITE_KEY"
+    text: "1x00000000000000000000AA"

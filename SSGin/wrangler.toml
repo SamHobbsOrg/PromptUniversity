@@ -1,0 +1,14 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "prompt-university-contact"
+pages_build_output_dir = "."
+compatibility_date = "2026-05-03"
+
+# This binding allows your code to use env.EMAIL.send()
+# [[send_email]]
+# name = "EMAIL"
+
+[vars]
+# You can put non-sensitive config here. 
+# Your email can go here if you don't mind it in Git, 
+# but it's better as a "Secret" in the dashboard.
+# MY_PRIVATE_EMAIL = "your-email@gmail.com"

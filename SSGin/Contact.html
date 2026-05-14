@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- From https://gemini.google.com/share/9777aa23e31a -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Contact Us</title>
+    <!-- Cloudstile Script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <!-- ssgb Header -->
+    <main class="content-wrapper">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">Contact us</h1>
+            </header>
+
+            <div class="post-content">
+                <form action="/submit" method="POST">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <!-- The Turnstile Widget -->
+                    <!-- <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA"></div> -->
+                    <!-- <div class="cf-turnstile" data-sitekey="0x4AAAAAADOIv861cSQRc0Ua"></div> -->
+                    <div class="cf-turnstile" data-sitekey="<!-- ssgi TURNSTILE_SITE_KEY -->"></div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </article>
+    </main>
+    <!-- ssgb Footer -->
+</body>
+</html>
