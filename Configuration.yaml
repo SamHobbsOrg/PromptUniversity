@@ -2,7 +2,8 @@
 debug: "yes"
 
 input_dir: "SSGin"
-output_dir: "..\\..\\..\\..\\..\\..\\Software\\Websites\\PromptUniversity"
+#output_dir: "..\\..\\..\\..\\..\\..\\Software\\Websites\\PromptUniversity"
+output_dir: "SSGout"
 snippets_dir: "Snippets"
 
 block_substitutions:
@@ -13,4 +14,5 @@ block_substitutions:
 
 inline_substitutions:
   - name: "TURNSTILE_SITE_KEY"
-    text: "1x00000000000000000000AA"
+#   text: "1x00000000000000000000AA"
+    text: "0x4AAAAAADOIv861cSQRc0Ua"
