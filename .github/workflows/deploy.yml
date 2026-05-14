@@ -41,11 +41,19 @@ jobs:
         working-directory: ./
         run: dotnet run --project ./ssg-tool/SimpleSubstitutionSSG.csproj --no-build -- Configuration.yaml
       
+      # - name: Deploy to Cloudflare Pages
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: promptuniversity  
+      #     directory: SSGout
+      #     branch: main
+
+      # The following is from Cloudflare's AI
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: promptuniversity  
-          directory: SSGout
-          branch: main
+          command: pages deploy SSGout --project-name=promptuniversity
