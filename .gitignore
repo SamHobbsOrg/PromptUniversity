@@ -366,3 +366,4 @@ FodyWeavers.xsd
 # Added by Sam Hobbs
 RunLocal.cmd
 .dev.vars
+.wrangler/
